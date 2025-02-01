@@ -7,44 +7,60 @@ public class Main {
 
         int[] payments = {25000, 20000, 15500, 11500, 5500};
         int summa = 0;
-        int i2=0;
-        for (int i= 0; i <payments.length;i++); {
-            summa += payments[i2];
+        for (int amount2: payments) {
+            summa += amount2;
+        }
             System.out.println("Сумма трат за месяц составила " + summa + "рублей");
 
-        }
+
         System.out.println();
 
         System.out.println("Task 2");
         int[] weekend = {6000, 5000, 4000, 3000, 2000};
-        int minAmount = weekend[0];
-        int maxAmount = weekend[0];
-
+        int amount = -1;
+        int amount2= 1;
+        int i3 = 0;
         for (int i = 1; i < weekend.length; i++) {
-            if (weekend[i] < minAmount) {
-                minAmount = weekend[i];
+            if (weekend[i] > amount) {
+                amount = weekend[i];
             }
-            if (weekend[i] < maxAmount) {
-                maxAmount = weekend[i];
-                System.out.println("Минимальная сумма трат за неделю составила " + minAmount + " рублей.");
-                System.out.println("Максимальная сумма трат за неделю составила " + maxAmount + " рублей.");
+            if (weekend[i] < amount2) {
+                amount = weekend[i];
             }
+
+                System.out.println("Минимальная сумма трат за неделю составила"+ amount2 +"рублей");
+            System.out.println("Максимальная сумма трат за неделю составила"+ amount+ "рублей");
+
+            System.out.println("Task 3");
+
+
+            {
+                double[] payments2 = {25000, 20000, 15500, 11500, 5500};
+                int sum = 0;
+                for (int i1 = 0; i < payments2.length; i++) {
+                    sum += payments2[i];
+                    sum = sum / 5;
+
+                }
+                System.out.print("Средняя сумма трат за месяц составила" + sum + "рублей");
+
+                System.out.println();
+                System.out.println("Task4");
+
+                char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+                for (int i4 = 0; i < reverseFullName.length - 1; i++) {
+                    int temp = reverseFullName[i];
+                    reverseFullName[i] = reverseFullName[i + 1];
+                    System.out.println(reverseFullName[i]);
+                }
+
+            }
+
         }
-        System.out.println("Task 3");
-        double[] payments2 = {25000, 20000, 15500, 11500, 5500};
-        int month = 30 / 7;
-        double expenses = summa / month;
-        System.out.print(" Средняя сумма трат за месяц составила" + expenses + " рублей");
-        System.out.println();
-        System.out.println("Task4");
-
-        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        char name2 =0;
-        for(int i1 = reverseFullName.length - 1; i1 >= 0; i1--)
-        System.out.print(reverseFullName[i1]);
-
     }
 }
+
+
 
 
 
